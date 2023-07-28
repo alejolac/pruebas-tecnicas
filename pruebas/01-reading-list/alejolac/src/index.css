@@ -1,0 +1,10 @@
+body {
+    font-family: 'Mynerve', cursive;
+    color: white;
+    background-color: #111111;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+}

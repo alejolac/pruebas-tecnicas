@@ -1,0 +1,151 @@
+.div-main {
+    margin-bottom: 20px;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-favorites-container {
+    width: 35%;
+    max-width: 50%;
+    margin-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    background-color: rgb(68, 67, 67);
+}
+
+.list-books {
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.book {
+    flex-basis: 25%;
+    /* Permite tener 4 elementos por fila */
+    padding: 5px;
+    /* Reduce el espacio entre los elementos */
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    /* Agrega una transición suave al efecto hover */
+
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Evita que las imágenes se salgan del contenedor */
+}
+
+.book:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    /* Aplica un efecto de escala al hacer hover en el elemento */
+}
+
+.book img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    /* Ajusta el tamaño de las imágenes para que cubran todo el espacio */
+}
+
+@media (max-width: 1024px) {
+    .book {
+        flex-basis: 33.33%;
+        /* Cambia a 3 elementos por fila en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .book {
+        flex-basis: 50%;
+        /* Cambia a 2 elementos por fila en pantallas aún más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .book {
+        flex-basis: 100%;
+        /* Cambia a 1 elemento por fila en pantallas muy pequeñas */
+    }
+}
+
+.filters {
+    display: flex;
+}
+
+
+
+.input-range {
+    /* Elimina los estilos por defecto del rango */
+    -webkit-appearance: none;
+    appearance: none;
+    /* Establece el tamaño de la línea del rango */
+    height: 2px;
+    /* Establece el color de fondo de la línea del rango */
+    background-color: white;
+    /* Establece el color de fondo del rango */
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+/* Estiliza el rango deslizante */
+.input-range::-webkit-slider-thumb {
+    /* Establece el tamaño del círculo del rango */
+    width: 20px;
+    height: 20px;
+    /* Establece el borde del círculo */
+    border: 2px solid white;
+    /* Establece el color de relleno del círculo */
+    background-color: black;
+    /* Hace que el círculo sea redondeado */
+    border-radius: 50%;
+    /* Elimina los estilos por defecto del círculo del rango */
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Estiliza el rango deslizante en otros navegadores */
+.input-range::-moz-range-thumb {
+    /* Agrega estilos similares a los del círculo del rango de WebKit */
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    background-color: black;
+    border-radius: 50%;
+}
+
+/* Estiliza el rango deslizante en Internet Explorer */
+.input-range::-ms-thumb {
+    /* Agrega estilos similares a los del círculo del rango de WebKit */
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.list-favorites-book {
+    position: relative;
+    display: inline-block;
+}
+
+
+.cross-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    /* Cambia el color del ícono si lo deseas */
+}
+
+.book-marked {
+    filter: grayscale(0.8);
+}
